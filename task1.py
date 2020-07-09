@@ -1,10 +1,16 @@
-def div(number1, number2):
+
+from sys import argv
+script_name, production, rate, prize = argv
+
+def zp():
     try:
-        result = number1 / number2
-    except ZeroDivisionError:
-        print('На 0 делить нельзя!')
+        wages = int(production) * int(rate) + int(prize)
+    except:
+        print('Ошибка ввода данных')
     else:
-        print(f'Результат деления: %.3f' % result)
+        wages = int(production) * int(rate) + int(prize)
+        print('Заработная плата составила: ', wages)
 
 
-div(number1=int(input('Введите первое число: ')), number2=int(input('Введите второе число, не равное 0: ')))
+zp()
+

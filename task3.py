@@ -1,10 +1,7 @@
-def my_func(num1, num2, num3):
-    numbers = [num1, num2, num3]
-    numbers.remove(min(num1, num2, num3))
-    print(f'Сумма двух наибольших чисел равна: {sum(numbers)}')
+
+def my_func():
+    result ={el for el in range(20, 241) if el % 20 == 0 or el % 21 == 0}
+    print(result)
 
 
-my_func(num1=int(input('Введите первое число: ')),
-        num2=int(input('Введите второе число: ')),
-        num3=int(input('Введите третье число: '))
-        )
+my_func()

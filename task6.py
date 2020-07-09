@@ -1,14 +1,14 @@
-word = input('Введите слово: ')
+from itertools import count, cycle
 
-def int_func(word):
-    return word.capitalize()
+for el in count(3):
+    print(el)
+    if el == 10:
+        break
 
 
-print(int_func(word))
-
-
-my_str = input('Введите строку: ')
-new_str = my_str.split(' ')
-new_str_big = list(map(int_func, new_str))
-
-print(' '.join(new_str_big))
+numbers = ['три', 'два', 'один']
+score = 0
+for i in cycle(numbers):
+    if score != 5:
+        print(numbers)
+        score += 1
